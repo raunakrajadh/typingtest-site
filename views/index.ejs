@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Typing Test</h1>
+        <div id="testTextContainer">
+            <p id="testText"><%= testText %></p>
+            <textarea id="userInput" placeholder="Press start to begin..."></textarea>
+            <button id="startButton" onclick="startTest()">Start</button>
+        </div>
+    </div>
+    <form id="resultForm" action="/result" method="post" style="display: none;">
+        <input type="hidden" name="userInput" id="hiddenUserInput">
+        <input type="hidden" name="timeTaken" id="hiddenTimeTaken">
+        <input type="hidden" name="testText" id="hiddenTestText" value="<%= testText %>">
+    </form>
+    <script src="/js/script.js"></script>
+</body>
+</html>
